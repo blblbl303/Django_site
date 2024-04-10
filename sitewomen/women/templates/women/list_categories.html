@@ -1,0 +1,8 @@
+{% for cat in cats %}
+{% if cat.id == cat_selected %}
+<li class="btn btn-outline-secondary disabled">{{ cat.name }}</li>
+{% else %}
+<li><a class="btn btn-outline-secondary" href="{{ cat.get_absolute_url }}" role="button">{{ cat.name }}</a></li>
+
+{% endif %}
+{% endfor %}
